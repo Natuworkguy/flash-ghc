@@ -1,0 +1,24 @@
+{
+  "name": "ghc",
+  "description": "GitHub Copilot's models, as @ghc/<model>",
+  "version": "0.2.0",
+  "providers": [
+    {
+      "name": "ghc",
+      "description": "Models through your GitHub Copilot subscription",
+      "run": [
+        "python",
+        "./provider.py"
+      ],
+      "timeout": 600
+    }
+  ],
+  "settings": [
+    {
+      "id": "api_key",
+      "label": "API key",
+      "secret": true,
+      "help": "A GitHub token that can use Copilot. Used ahead of COPILOT_GITHUB_TOKEN, GH_TOKEN, GITHUB_TOKEN and gh; left empty, those or gh auth login are used."
+    }
+  ]
+}
